@@ -10,7 +10,6 @@ commands:
             curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
             unzip awscliv2.zip
             sudo ./aws/install
-
   install_ansible:
     description: Install Ansible
     steps:
@@ -21,7 +20,6 @@ commands:
             sudo apt install software-properties-common -y
             sudo add-apt-repository --yes --update ppa:ansible/ansible
             sudo apt install ansible -y
-
   install_nodejs:
     description: Install Node.js 13
     steps:
@@ -32,7 +30,6 @@ commands:
             sudo apt install -y nodejs
             sudo npm install --global n
             sudo n 13.8.0
-
   destroy-environment:
     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
     parameters:
@@ -47,7 +44,6 @@ commands:
             aws cloudformation delete-stack --stack-name udapeople-backend-<< parameters.Workflow_ID >>
             aws s3 rm s3://udapeople-<< parameters.Workflow_ID >> --recursive
             aws cloudformation delete-stack --stack-name udapeople-frontend-<< parameters.Workflow_ID >>
-
   revert-migrations:
     description: Revert the last migration if successfully run in the current workflow.
     parameters:
@@ -116,7 +112,6 @@ jobs:
             npm install
             npm test
   # comment here to refresh
-  # ADD Back-end
   test-backend:
     docker:
       - image: cimg/node:13.8.0
