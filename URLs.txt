@@ -1,0 +1,16 @@
+Github URL:
+https://github.com/AbdelrahmanAdelTaha/DevOps_Udacity_FinalProject
+
+S3 Bucket URL:
+http://udapeople-641e412.s3-website-us-east-1.amazonaws.com
+
+CloudFront URL:
+https://d38k1l39jct72.cloudfront.net
+
+Back-end URL:
+ec2-3-216-53-123.compute-1.amazonaws.com
+
+Prometheus-Server URL:
+ec2-44-210-129-159.compute-1.amazonaws.com
+
+
